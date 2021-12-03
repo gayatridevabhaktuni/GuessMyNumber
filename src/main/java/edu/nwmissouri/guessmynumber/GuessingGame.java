@@ -49,11 +49,11 @@ public class GuessingGame {
         } else if (userAnswer == computerNumber) {
             return "Correct!\nTotal Guesses: " + count;
         } else if (userAnswer > computerNumber) {
-            return "Your guess is too high, try again.\nTry Number: " + count;
+            return "Your guess is too high, try again.\nyou have used " + count+" guess";
         } else if (userAnswer < computerNumber) {
-            return "Your guess is too low, try again.\nTry Number: " + count;
+            return "Your guess is too low, try again.\nyou have used " + count+" guess";
         } else {
-            return "Your guess is incorrect\nTry Number: " + count;
+            return "Your guess is incorrect\n you have used " + count+" guess";
         }
     }
 }
