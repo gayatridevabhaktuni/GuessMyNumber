@@ -43,17 +43,17 @@ public class GuessingGameGayatri {
         // TODO: Instead of "Try Number" which sounds like we should try that as a guess...
         // Say "You've used " + count + guesses.
         // If count is one, use "guess", else use "guesses" HINT: Ternary operator
-        String s = (count ==1)? " guess.": " guesses.";
+        String s = (count == 1)? " guess.": " guesses.";
         if (userAnswer <= 0 || userAnswer > 100) {
             return "Your guess is invalid";
         } else if (userAnswer == magicNumber) {
-            return "Correct!\nTotal Guesses: " + count;
+            return "Correct!\n you are done in " + count +s;
         } else if (userAnswer > magicNumber) {
-            return "Your guess is too high, try again.\nyou have used " + count+ s;
+            return "Your guess is too high, try again.\n this is " + count+ s;
         } else if (userAnswer < magicNumber) {
-            return "Your guess is too low, try again.\nyou have used " + count+ s;
+            return "Your guess is too low, try again.\nthis is " + count+ s;
         } else {
-            return "Your guess is incorrect\n you have used " + count+ s;
+            return "Your guess is incorrect\n this is " + count+ s;
         }
     }
 }
